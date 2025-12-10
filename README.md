@@ -28,6 +28,9 @@ Okay, on with the show....
 
 ### 01_createSingleBinCue.py
 
+#### Purpose
+Takes a PS1 game in the format of a single cue file plus multiple bin files and combines it into a single cue/bin pair with .cue file rewriting so that CD audio music works when running on a PS3 via CFW / webMAN MOD.
+
 #### What / How
 Run this in a directory with one or more PSX games either as 7z archives or as cue/bin files where each / any game has multiple bin or wav files and it will use MAME's CHDMAN to rewrite it into a single bin/cue pair.
 
@@ -63,6 +66,9 @@ If the script is in the same directory as the bin/cue pairs you don't have to sp
 
 ### 02_tagBinCuePairsWithIDs.py
 
+#### Purpose
+Inteogates bin/cue/iso games for the product ID then adds it to the filename so that webMAN MOD on the PS3 will show correct cover images in the XMB.
+
 #### What / How
 Run this in a directory with one or more PSX games as either bin/cue sets or in ISO format and it will analyse the file to determine the SLUS-XXXX / SLES-XXXX etc. game identifier and add it to the filename. It will also cleanly re-format any existing [SLUS_xxxx] type name that might use an underscore or such rather than a hypen.
 
@@ -77,9 +83,6 @@ or
 `My Other Game (PAL) [SLUS-XXXX].cue` / `My Other Game (PAL) [SLUS-XXXX].bin`
 
 **Note**: The .cue file contents will be modified to point to the renamed .bin file, and the original files are renamed (we don't duplicate then rename the dupes).
-
-#### Why?
-Because if you play PS1 games on a PS3 then webMAN Mod and such won't pick up the cover images in the XMB unless the disc image name contains the product code / product ID.
 
 #### Usage
 `python 02_tagBinCuePairsWithIDs.py [directory] [--dry-run]`
@@ -111,6 +114,9 @@ For archival - raw ISOs or bin/cue formats can often be crunched down significan
 
 ### 04_tagPs2IsosWithIDs.py
 
+#### Purpose
+Interrogates and renames PS2 .ISO files to include the product ID so that the cover images match the game and are shown via CFW / webMAN MOD.
+
 #### What / How
 Run this in a directory with one or more **PS2** games as ISO files and it will analyse the file to determine the product ID then add that to the filename.
 
@@ -121,9 +127,6 @@ Run this in a directory with one or more **PS2** games as ISO files and it will 
 `My PS2 Game (PAL) [SLUS-XXXX].iso`
 
 **Note**: The original files are renamed - we don't duplicate then rename the dupes.
-
-#### Why?
-Again, because if you play PS2 games on a PS3 then webMAN Mod and such won't pick up the cover images in the XMB unless the disc image name contains the product code / product ID.
 
 #### Usage
 `python 04_tagPs2IsosWithIDs.py [directory] [--dry-run]`
