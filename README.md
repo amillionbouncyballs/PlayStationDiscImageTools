@@ -67,7 +67,7 @@ If the script is in the same directory as the bin/cue pairs you don't have to sp
 ### 02_tagBinCuePairsWithIDs.py
 
 #### Purpose
-Inteogates bin/cue/iso games for the product ID then adds it to the filename so that webMAN MOD on the PS3 will show correct cover images in the XMB.
+Interogates bin/cue/iso games for the product ID then adds it to the filename so that webMAN MOD on the PS3 will show correct cover images in the XMB.
 
 #### What / How
 Run this in a directory with one or more PSX games as either bin/cue sets or in ISO format and it will analyse the file to determine the SLUS-XXXX / SLES-XXXX etc. game identifier and add it to the filename. It will also cleanly re-format any existing [SLUS_xxxx] type name that might use an underscore or such rather than a hypen.
