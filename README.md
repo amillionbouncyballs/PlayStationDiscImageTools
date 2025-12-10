@@ -75,7 +75,7 @@ or
 Because if you play PS1 games on a PS3 then webMAN Mod and such won't pick up the cover images in the XMB unless the disc image name contains the product code / product ID.
 
 #### Usage
-`python 02_tagBinCuePairsWithIDs.py [directory] [--dry-run]python `
+`python 02_tagBinCuePairsWithIDs.py [directory] [--dry-run]`
 
 <hr/>
 
@@ -88,13 +88,15 @@ Run this in a directory with one or more PSX games as bin/cue pairs and it will 
 `My Game (PAL) [SLUS-XXXX].cue` / `My Game (PAL) [SLUS-XXXX].bin`
 
 #### After
-`My Game (PAL).7z` now also exists which contains both `My Game (PAL) [SLUS-XXXX].cue` / `My Game (PAL) [SLUS-XXXX].bin` - note that it does NOT contain the product code in the archive name.
+`My Game (PAL).7z` now also exists which contains both `My Game (PAL) [SLUS-XXXX].cue` / `My Game (PAL) [SLUS-XXXX].bin` 
+
+**Note**: The archive name does not contain the product code, I didn't feel it was necessary but feel free to adjust or raise an issue if you feel it makes more sense to keep it.
 
 #### Why?
 For archival - raw ISOs or bin/cue formats can often be crunched down significantly, although you likely won't be able to play them directly in this compressed state.
 
 #### Usage
-`python 03_compressBinCueGames.py [directory] [--dry-run] [--overwrite] [--sevenzip /path/to/7z] [--level 9][--threads 0]`
+`python 03_compressBinCueGames.py [directory] [--dry-run] [--overwrite] [--sevenzip /path/to/7z] [--level 9] [--threads 0]`
 
 <hr/>
 
