@@ -1,8 +1,15 @@
 # PlayStation Disc Image Tools
 
-This repo contains a few Python scripts to manipulate PlayStation 1 (PS1 / PSX) and PlayStation 2 (PS2) disc images. These scripts are designed to run in a folder containing lots of disc images or lots of disc image *archives* and will group / modify things appropriately without making any changes to the original file *contents*, although renaming operations **do** occur on the originals.
+This repo contains a few Python scripts to manipulate PlayStation 1 (PS1 / PSX) and PlayStation 2 (PS2) disc images.
 
-Put the script somewhere and call it and use directory pathes, or just plonk a copy in the directory you want to run it from and do so.
+These scripts are designed to run in a folder containing lots of disc images or lots of disc image *archives* and will group / modify things appropriately without making any changes to the original file *contents*, although renaming operations **do** occur on the originals - but if you're following the 01/02/03 sequence this renaming will happen to the single bin/cue pair images generated from your originals.
+
+Options to run the scripts are probably:
+- Just plonk a copy in the directory containing your disc images and run it, or
+- Call the scripts from some path and use the direcotry flags to point to the directory containing your disc images, or
+- Put the script(s) somewhere in your path (such as `/usr/local/bin` if on Linux) and call them in the pwd containing your disc images.
+
+I numbered these scripts because the first three steps are the order it makes sense to run them when converting files for the PS1 - feel free to rename them as you wish.
 
 ## Dependencies:
 - `python` for scripting,
